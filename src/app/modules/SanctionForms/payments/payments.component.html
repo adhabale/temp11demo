@@ -1,0 +1,171 @@
+<div class="page-title">
+    <div class="col-md-12 title_left">
+        <h1>  A&S Payments Template</h1>
+
+    </div>
+</div> 
+<div class="clearfix"></div>
+
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+   <div class="x_panel">
+      <div class="x_content">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="question-body">
+                 Please select BU/Office<a tabindex="1" class="btn"
+                    role="button" data-toggle="popover" data-trigger="focus" title="Example:" data-content="January 1 for 12 months">
+                  </a>
+                </div>
+              </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="sub-input-control">
+                      <mat-select placeholder="BU/Office" [disableRipple]="true" [(ngModel)]="buo" name="buo"
+                        >
+                        <mat-option>None</mat-option>
+                        <mat-option *ngFor="let buo of buoffice" [value]="buo">{{buo}}</mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="!duration">
+                        Duration <strong>required</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+      </div>
+   </div>
+</div>
+  </div>
+
+
+
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+   <div class="x_panel">
+      <div class="x_content">
+                        <div class="payments-table">
+                            <table class="table">
+                                <tbody>
+                                    <tr style="color:#702082;">
+                                      <!-- <th></th> -->
+                                        <th style="width:7%">Posting ref number </th>
+                                         <th  style="width:7%">Sanctions touchpoint </th> 
+                                        <th  style="width:10%">Flow of monies</th>
+                                        <th style="width:7%" >Name of (re)insured</th>
+                                        <th  style="width:7%">Name of U/Ws</th>
+                                         <th style="width:7%">Type of policy e.g. Hull Liability </th>
+                                        <th style="width:7%">Inception date of policy</th> 
+                                          <th style="width:7%">Currency e.g. GBP/USD</th> 
+                                        <th style="width:7%">Billing amount</th>
+                                        <th  style="width:7%">KYC/CVT Comments</th>
+                                        <!-- <th colspan="4">Actions</th> -->
+                                    
+
+                                    </tr>
+
+                                    <tr>
+                                      <!-- <td><a><mat-icon>add</mat-icon></a></td> -->
+                                      <td>0112255PRM  </td>
+                                      <td>Russia </td>
+                                      <td>Money has been received from the client (123 Entity) and is now being passed onto U/Ws</td>
+                                      <td>Insured: XYZ Airline Reinsured:ABC Entity</td>
+                                      <td>RTFH Co.,ABC Ltd,5ive Inc.</td>
+                                      <td>Full Liability </td>
+                                      <td>01-01-2018</td>
+                                      <td>RUB</td>
+                                      <td>RUB 123,000</td>
+                                      <td>Clear</td>
+                                    </tr>
+
+                                     <tr>
+                                      <!-- <td><a><mat-icon>add</mat-icon></a></td> -->
+                                      <td>0112255CLM  </td>
+                                      <td>US </td>
+                                      <td>Money has been received from the client</td>
+                                      <td>Insured: XYZ Airline Reinsured:ABC Entity</td>
+                                      <td>RTFH Co.,ABC Ltd,5ive Inc.</td>
+                                      <td>Full Liability </td>
+                                      <td>24-01-2019</td>
+                                      <td>USD</td>
+                                      <td>USD 123,000</td>
+                                      <td>Clear</td>
+                                    </tr>
+
+                                       <tr>
+                                      <!-- <td><a><mat-icon>add</mat-icon></a></td> -->
+                                      <td>
+                                      <mat-form-field class="example-full-width cust-80">
+                                        <mat-label>Posting ref number</mat-label>
+                                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+                                      </mat-form-field>
+                                      </td>
+                                      <td>
+                                         <mat-form-field class="sub-input-control cust-90">
+                                        <mat-select placeholder="Sanction Touchpoint" [disableRipple]="true" [(ngModel)]="c"
+                                            name="country">
+                                            <mat-option>None</mat-option>
+                                            <mat-option *ngFor="let c of country" [value]="c">{{c}}</mat-option>
+                                        </mat-select>
+                                    </mat-form-field> 
+                                      </td>
+                                      <td>
+
+                                            <mat-form-field class="example-full-width cust-80">
+                                        <mat-label>Flow of monies</mat-label>
+                                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+                                      </mat-form-field>
+
+                                      </td>
+                                      <td>
+                                            <mat-form-field class="example-full-width cust-80">
+                                        <mat-label>Name of (re)insured</mat-label>
+                                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+                                      </mat-form-field>
+                                      </td>
+                                      <td>
+                                            <mat-form-field class="example-full-width cust-80">
+                                        <mat-label>Name of U/Ws</mat-label>
+                                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+                                      </mat-form-field>
+                                      </td>
+                                      <td>
+                                            <mat-form-field class="example-full-width cust-80">
+                                        <mat-label>Type of policy e.g. Hull Liability</mat-label>
+                                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+                                      </mat-form-field>
+                                      </td>
+                                      <td>
+                                        <mat-form-field class="cust-90">
+                                          <input class="date-picker" matInput [matDatepicker]="claimDatePicker" placeholder="Inception date of policy" [(ngModel)]="claimDate" required>
+                                          <mat-datepicker-toggle matSuffix [for]="claimDatePicker"></mat-datepicker-toggle>
+                                          <mat-datepicker #claimDatePicker></mat-datepicker>
+                                        </mat-form-field>
+                                      </td>
+                                      <td>
+                                      <mat-form-field class="sub-input-control cust-90">
+                                        <mat-select placeholder="Currency" [disableRipple]="true" [(ngModel)]="cur"
+                                            name="currency">
+                                            <mat-option>None</mat-option>
+                                            <mat-option *ngFor="let cur of currency" [value]="cur">{{cur}}</mat-option>
+                                        </mat-select>
+                                    </mat-form-field> 
+                                      </td>
+                                      <td>
+                                        <mat-form-field class="example-full-width cust-80">
+                                        <mat-label>Billing amount</mat-label>
+                                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+                                      </mat-form-field>
+                                      </td>
+                                      <td>
+                                        <mat-form-field class="example-full-width cust-80">
+                                        <mat-label>KYC/CVT Comments</mat-label>
+                                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+                                      </mat-form-field>
+                                      </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+      </div>
+   </div>
+   </div>
+
+</div>

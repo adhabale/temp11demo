@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Delegate/Reasign</h1>
+<div mat-dialog-content>
+	<p>Select People</p>
+	<mat-form-field class="sub-input-control margin-0">
+		<mat-select placeholder="Names" [disableRipple]="true" [(ngModel)]="name" name="names">
+			<mat-option>None</mat-option>
+			<mat-option *ngFor="let name of names" [value]="name">{{name}}</mat-option>
+		</mat-select>
+	</mat-form-field>
+</div>
+<div mat-dialog-actions class="margin-left">
+	<button mat-button (click)="onNoClick()"  mat-raised-button color="basic" >Cancel</button>
+  <button mat-button [mat-dialog-close]="data.name" cdkFocusInitial mat-raised-button color="primary">Ok</button>
+</div>

@@ -1,0 +1,20 @@
+@import "../sanction-forms.css";
+
+
+.payments-table{
+    /* margin-left: 65px; */
+    margin-top: 10px;
+}
+.cust-80{
+    width: 80px!important
+}
+.cust-90{
+    width: 80px!important
+}
+mat-select{
+    min-height: 26px!important;
+}
+.date-picker{
+min-height: 26px!important;
+
+}
